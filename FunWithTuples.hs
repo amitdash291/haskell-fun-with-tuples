@@ -11,3 +11,5 @@ reduceTupleList ts = case ts of
  TupleStr s -> Str (foldr (++) "" (mapTuples (++) s))
  TupleInt i -> Int (foldr (+) 0 (mapTuples (-) i))
  _ -> NotSupported
+ 
+ -- Example usage: tupleList = TupleInt [(2,1), (5,1)]; reduceTupleList tupleList (output: 5)
